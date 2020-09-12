@@ -1,0 +1,40 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 200px);
+
+  img {
+    width: 200px;
+  }
+
+  span {
+    font-size: 20pt;
+    font-weight: 500;
+  }
+
+  input {
+    height: 40px;
+    font-size: 20px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #bcdaff;
+    border-radius: 15px;
+    border: none;
+    height: 45px;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 300px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      background-color: #3d95ff;
+    }
+  }
+}
