@@ -38,9 +38,17 @@ export const NavBar: React.FC = () => {
                     Sign-up
                 </Link>
                 {user && (
-                    <Link className="menu-item" to={'/set-profile-data'}>
-                        Set profile data
-                    </Link>
+                    <>
+                        <Link className="menu-item" to={'/set-profile-data'}>
+                            Set profile data
+                        </Link>
+                        <Link className="menu-item" to={'/get-profile-data'}>
+                            Get profile data
+                        </Link>
+                        <Link className="menu-item" to={'/update-profile-data'}>
+                            Update profile data
+                        </Link>
+                    </>
                 )}
             </div>
         </div>

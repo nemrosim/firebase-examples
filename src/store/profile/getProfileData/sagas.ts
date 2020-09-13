@@ -3,25 +3,29 @@ import { toast } from 'react-toastify';
 import { getProfileDataSuccess, getProfileDataError } from './actions';
 import { firebase_app } from '../../../api/firebase';
 
-export function* worker_getProfileData(
-    action: Record<'payload', { firstName: string; lastName: string }>,
-): IterableIterator<any> {
+export function* worker_getProfileData(): IterableIterator<any> {
     let infoToastID;
     try {
         infoToastID = toast.info('Loading');
 
-        const { firstName, lastName } = action.payload;
+        const userId = firebase_app.auth().currentUser?.uid;
+        if (userId) {
+            const document = yield firebase_app
+                .firestore()
+                .collection('profiles')
+                .doc(userId)
+                .get();
 
-        yield firebase_app
-            .firestore()
-            .collection('profiles')
-            .doc(firebase_app.auth().currentUser.uid)
-            .update({ firstName, lastName });
+            toast.dismiss(infoToastID);
+            toast.success('Profile data loaded');
 
-        toast.dismiss(infoToastID);
-        toast.success('Profile data saved');
+            // @ts-ignore
+            const data = document?.data();
 
-        yield put(getProfileDataSuccess());
+            yield put(getProfileDataSuccess(data));
+        } else {
+            toast.info('Not logged in');
+        }
     } catch (error) {
         toast.dismiss(infoToastID);
         toast.error(error.message);

@@ -1,0 +1,1 @@
+export { SignInWithPopUp } from './SignInWithPopUp';

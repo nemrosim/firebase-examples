@@ -1,0 +1,22 @@
+.get-profile-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 200px);
+
+  img {
+    width: 200px;
+  }
+
+  span {
+    font-size: 20pt;
+    font-weight: 500;
+  }
+
+  pre {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+}

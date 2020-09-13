@@ -1,7 +1,7 @@
 import React from 'react';
-import firebaseImage from '../../assets/firebase.png';
+import firebaseImage from '../../../assets/firebase.png';
 import { useDispatch } from 'redux-react-hook';
-import { signInPopup } from '../../store/auth/signInWithPopUp';
+import { signInPopup } from '../../../store/auth/signInWithPopUp';
 
 import './signInWithPopup.scss';
 

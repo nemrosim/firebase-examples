@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import firebaseImage from '../../assets/firebase.png';
+import firebaseImage from '../../../assets/firebase.png';
 import { useDispatch } from 'redux-react-hook';
 
-import './signUp.scss';
-import { signUp } from '../../store/auth/signUp';
+import './signIn.scss';
+import { signIn } from '../../../store/auth/signIn';
+import { firebase_app } from '../../../api/firebase';
 
-export const SignUp: React.FC = () => {
+export const SignIn: React.FC = () => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
@@ -15,7 +16,7 @@ export const SignUp: React.FC = () => {
         <div className="sign-up">
             <img src={firebaseImage} />
 
-            <span>Sign up</span>
+            <span>Sign in</span>
             <input
                 id="email"
                 name="email"
@@ -32,12 +33,13 @@ export const SignUp: React.FC = () => {
             />
             <button
                 onClick={() => {
-                    if (email && password) {
-                        dispatch(signUp({ email, password }));
-                    }
+                    firebase_app.analytics().logEvent('User clicked Sign in', {
+                        email,
+                    });
+                    dispatch(signIn({ email, password }));
                 }}
             >
-                Create new user
+                Sign in
             </button>
         </div>
     );

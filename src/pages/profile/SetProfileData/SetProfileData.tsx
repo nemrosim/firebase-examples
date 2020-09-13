@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import firebaseImage from '../../assets/firebase.png';
+import firebaseImage from '../../../assets/firebase.png';
 import { useDispatch } from 'redux-react-hook';
-import { action_setProfileData } from '../../store/profile/setProfileData';
+import { action_setProfileData } from '../../../store/profile/setProfileData';
 
 import './setProfileData.scss';
 
