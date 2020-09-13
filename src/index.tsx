@@ -14,6 +14,9 @@ import { NavBar } from './components/NavBar/NavBar';
 import { SignIn } from './pages/SignIn/SignIn';
 import { SignUp } from './pages/SignUp/SignUp';
 import { toast, ToastContainer } from 'react-toastify';
+import { SignInWithPopUp } from './pages/SignInWithPopUp/SignInWithPopUp';
+import { SetProfileData } from './pages/SetProfileData/SetProfileData';
+import { PageNotFound } from './pages/PageNotFound/PageNotFound';
 
 // Call it once in your app. At the root of your app is the best place
 toast.configure();
@@ -25,7 +28,10 @@ ReactDOM.render(
                 <NavBar />
                 <Switch>
                     <Route path="/sign-up" exact={true} component={SignUp} />
-                    <Route path="/sign-in" component={SignIn} />
+                    <Route path="/sign-in" exact={true} component={SignIn} />
+                    <Route path="/sign-in-with-popup" exact={true} component={SignInWithPopUp} />
+                    <Route path="/set-profile-data" exact={true} component={SetProfileData} />
+                    <Route component={PageNotFound} />
                 </Switch>
             </Router>
             <ToastContainer />

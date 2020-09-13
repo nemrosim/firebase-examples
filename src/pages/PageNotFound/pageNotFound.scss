@@ -1,0 +1,16 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 200px);
+
+  img {
+    width: 200px;
+  }
+
+  span {
+    font-size: 20pt;
+    font-weight: 500;
+  }
+}

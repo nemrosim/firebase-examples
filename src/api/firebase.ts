@@ -22,4 +22,6 @@ export const firebaseConfig = {
     measurementId: REACT_APP_MEASUREMENT_ID,
 };
 
+console.log('firebase config', firebaseConfig);
+
 export const firebase_app = firebase.initializeApp(firebaseConfig);

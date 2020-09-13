@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import okImage from '../../assets/ok.png';
 import { firebase_app } from '../../api/firebase';
 import { useDispatch } from 'redux-react-hook';
-import { signOut } from '../../store/auth/auth.actions';
+import { signOut } from '../../store/auth/signOut';
 
 export const NavBar: React.FC = () => {
     const dispatch = useDispatch();
@@ -13,7 +13,6 @@ export const NavBar: React.FC = () => {
     firebase_app.auth().onAuthStateChanged((user) => {
         if (user) {
             // User is signed in.
-            console.log('User', user);
             setUser(user);
         } else {
             setUser(undefined);
@@ -32,12 +31,17 @@ export const NavBar: React.FC = () => {
                 <Link className="menu-item" to={'/sign-in'}>
                     Sign-in
                 </Link>
+                <Link className="menu-item" to={'/sign-in-with-popup'}>
+                    Sign-in popup
+                </Link>
                 <Link className="menu-item" to={'/sign-up'}>
                     Sign-up
                 </Link>
-                <Link className="menu-item" to={'/profile'}>
-                    Profile
-                </Link>
+                {user && (
+                    <Link className="menu-item" to={'/set-profile-data'}>
+                        Set profile data
+                    </Link>
+                )}
             </div>
         </div>
     );
