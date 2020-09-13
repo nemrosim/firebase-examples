@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './navbar.scss';
 import { Link } from 'react-router-dom';
 import okImage from '../../assets/ok.png';
@@ -15,6 +15,8 @@ export const NavBar: React.FC = () => {
             // User is signed in.
             console.log('User', user);
             setUser(user);
+        } else {
+            setUser(undefined);
         }
     });
 
