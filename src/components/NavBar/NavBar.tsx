@@ -5,10 +5,11 @@ import okImage from '../../assets/ok.png';
 import { firebase_app } from '../../api/firebase';
 import { useDispatch } from 'redux-react-hook';
 import { signOut } from '../../store/auth/signOut';
+import { User } from 'firebase';
 
 export const NavBar: React.FC = () => {
     const dispatch = useDispatch();
-    const [user, setUser] = useState();
+    const [user, setUser] = useState<User>();
 
     firebase_app.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -46,7 +47,13 @@ export const NavBar: React.FC = () => {
                             Get profile data
                         </Link>
                         <Link className="menu-item" to={'/update-profile-data'}>
-                            Update profile data
+                            Update profile
+                        </Link>
+                        <Link className="menu-item" to={'/delete-profile-data'}>
+                            Delete profile
+                        </Link>
+                        <Link className="menu-item" to={'/set-profile-image'}>
+                            Set image
                         </Link>
                     </>
                 )}

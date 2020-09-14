@@ -5,3 +5,5 @@ export { SignUp } from './auth/SignUp';
 export { SignIn } from './auth/SignIn';
 export { SignInWithPopUp } from './auth/SignInWithPopUp';
 export { UpdateProfileData } from './profile/UpdateProfileData';
+export { DeleteProfileData } from './profile/DeleteProfileData';
+export { SetProfileImage } from './image/SetProfileImage';

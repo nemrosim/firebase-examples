@@ -13,7 +13,10 @@ export function* worker_updateProfileData(
         if (userId) {
             infoToastID = toast.info('Loading');
 
-            const doc = firebase_app.firestore().collection('profiles').doc(userId);
+            const doc = firebase_app
+                .firestore()
+                .collection('profiles')
+                .doc(userId);
 
             const { firstName, lastName } = action.payload;
 

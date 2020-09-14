@@ -1,0 +1,1 @@
+export { SetProfileImage } from './SetProfileImage';

@@ -14,12 +14,13 @@ import {
     PageNotFound,
     GetProfileData,
     UpdateProfileData,
+    SetProfileImage,
+    DeleteProfileData,
 } from './pages';
 import { toast, ToastContainer } from 'react-toastify';
 
 import './styles/index/css-styles-reset.scss';
 import './styles/index/main.scss';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 // Call it once in your app. At the root of your app is the best place
@@ -38,6 +39,8 @@ ReactDOM.render(
                     <Route path="/get-profile-data" exact={true} component={GetProfileData} />
                     <Route path="/get-profile-data" exact={true} component={GetProfileData} />
                     <Route path="/update-profile-data" exact={true} component={UpdateProfileData} />
+                    <Route path="/delete-profile-data" exact={true} component={DeleteProfileData} />
+                    <Route path="/set-profile-image" exact={true} component={SetProfileImage} />
                     <Route component={PageNotFound} />
                 </Switch>
             </Router>

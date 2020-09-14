@@ -8,5 +8,10 @@ export interface ReduxStore {
             loading: boolean;
             error: {};
         };
+        setAvatar: {
+            data: {};
+            loading: boolean;
+            error: {};
+        };
     };
 }

@@ -37,7 +37,7 @@ export const UpdateProfileData: React.FC = () => {
     }, [profile, isProfileLoading]);
 
     return (
-        <div className="set-profile-data">
+        <div className="update-profile-data">
             <img src={firebaseImage} />
 
             <span>Update profile data</span>
