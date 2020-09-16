@@ -7,3 +7,4 @@ export { SignInWithPopUp } from './auth/SignInWithPopUp';
 export { UpdateProfileData } from './profile/UpdateProfileData';
 export { DeleteProfileData } from './profile/DeleteProfileData';
 export { SetProfileImage } from './image/SetProfileImage';
+export { SignInWithMultipleAccounts } from './auth/SignInWithMultipleAccounts';

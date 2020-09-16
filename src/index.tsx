@@ -16,11 +16,12 @@ import {
     UpdateProfileData,
     SetProfileImage,
     DeleteProfileData,
+    SignInWithMultipleAccounts,
 } from './pages';
 import { toast, ToastContainer } from 'react-toastify';
 
-import './styles/index/css-styles-reset.scss';
-import './styles/index/main.scss';
+import './assets/styles/css-styles-reset.scss';
+import './assets/styles/main.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Call it once in your app. At the root of your app is the best place
@@ -35,6 +36,11 @@ ReactDOM.render(
                     <Route path="/sign-up" exact={true} component={SignUp} />
                     <Route path="/sign-in" exact={true} component={SignIn} />
                     <Route path="/sign-in-with-popup" exact={true} component={SignInWithPopUp} />
+                    <Route
+                        path="/sign-in-with-multiple-accounts"
+                        exact={true}
+                        component={SignInWithMultipleAccounts}
+                    />
                     <Route path="/set-profile-data" exact={true} component={SetProfileData} />
                     <Route path="/get-profile-data" exact={true} component={GetProfileData} />
                     <Route path="/get-profile-data" exact={true} component={GetProfileData} />

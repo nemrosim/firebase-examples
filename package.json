@@ -18,6 +18,9 @@
     "redux-react-hook": "^4.0.1",
     "redux-saga": "^1.1.3"
   },
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -1,2 +1,2 @@
 export { worker_signInPopup } from './sagas';
-export { signInPopup } from './actions';
+export { action_signInWithPopup } from './actions';

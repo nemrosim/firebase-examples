@@ -1,0 +1,35 @@
+@import '../../../assets/styles/partial';
+
+
+.main-div {
+  @extend %main_div;
+
+  .logo-img {
+    width: 200px;
+  }
+
+  .image-icon-button {
+    margin: 10px;
+    width: 70px;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+  .images-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  span {
+    font-size: 20pt;
+    font-weight: 500;
+  }
+
+  input {
+    height: 40px;
+    font-size: 20px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+}

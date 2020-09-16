@@ -35,6 +35,9 @@ export const NavBar: React.FC = () => {
                 <Link className="menu-item" to={'/sign-in-with-popup'}>
                     Sign-in popup
                 </Link>
+                <Link className="menu-item" to={'/sign-in-with-multiple-accounts'}>
+                    Sign-in with multiple accounts
+                </Link>
                 <Link className="menu-item" to={'/sign-up'}>
                     Sign-up
                 </Link>

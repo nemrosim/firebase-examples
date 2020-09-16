@@ -5,13 +5,16 @@ import firebase from 'firebase';
 import { signInPopupError, signInPopupSuccess } from './actions';
 import { firebase_app } from '../../../api/firebase';
 
-export function* worker_signInPopup(): IterableIterator<any> {
+export function* worker_signInPopup(
+    action: Record<'payload', { provider: firebase.auth.AuthProvider }>,
+): IterableIterator<any> {
     let infoToastID;
     try {
-        infoToastID = toast.info('Loading');
+        const { provider } = action.payload;
 
-        let provider = new firebase.auth.GoogleAuthProvider();
-        provider.addScope('email');
+        console.log('PROVIDER', provider);
+
+        infoToastID = toast.info('Loading');
 
         const userCredential = yield firebase_app.auth().signInWithPopup(provider);
 
@@ -22,6 +25,8 @@ export function* worker_signInPopup(): IterableIterator<any> {
     } catch (error) {
         toast.dismiss(infoToastID);
         toast.error(error.message);
+
+        console.log(error);
 
         yield put(signInPopupError(error));
     }

@@ -1,0 +1,30 @@
+@use 'partial';
+
+html, body {
+  height: 100%;
+
+  #root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.submit-button {
+  background-color: #bcdaff;
+  border-radius: 15px;
+  border: none;
+  height: 45px;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 300px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    background-color: #3d95ff;
+  }
+}
+
+

@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+}
+html #root, body #root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-button {
+  background-color: #bcdaff;
+  border-radius: 15px;
+  border: none;
+  height: 45px;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 300px;
+  cursor: pointer;
+}
+.submit-button:focus {
+  outline: none;
+  background-color: #3d95ff;
+}
+
+.image-icon-button {
+  width: 70px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.nav-bar {
+  background-color: black;
+  height: 100%;
+  width: 200px;
+}
+.nav-bar .menu {
+  display: flex;
+  flex-direction: column;
+}
+.nav-bar .menu img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin: 30px auto;
+}
+.nav-bar .menu .menu-item {
+  color: cornsilk;
+  margin: 15px;
+  cursor: pointer;
+  transition-duration: 200ms;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: 1.6px;
+}
+.nav-bar .menu .menu-item:hover {
+  text-shadow: 1px 1px 5px cornsilk;
+}
+
+/*# sourceMappingURL=navbar.css.map */

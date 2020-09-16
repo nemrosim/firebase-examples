@@ -1,7 +1,7 @@
 import React from 'react';
 import firebaseImage from '../../../assets/firebase.png';
 import { useDispatch } from 'redux-react-hook';
-import { signInPopup } from '../../../store/auth/signInWithPopUp';
+import { action_signInWithPopup } from '../../../store/auth/signInWithPopUp';
 
 import './signInWithPopup.scss';
 
@@ -15,7 +15,7 @@ export const SignInWithPopUp: React.FC = () => {
             <span>Sign in with pop up</span>
             <button
                 onClick={() => {
-                    dispatch(signInPopup());
+                    dispatch(action_signInWithPopup());
                 }}
             >
                 Sign in
